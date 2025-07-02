@@ -3,7 +3,7 @@
 
 
 
-What Is Email Spoofing?
+## What Is Email Spoofing?
 
 Email spoofing is when an attacker forges the "From" address of an email to make it look like it’s coming from a trusted source, such as a boss, company, or known contact, even though it isn’t. The attacker does not need access to the real email account — they just fake the sender information in the email headers.
 
@@ -88,7 +88,8 @@ Your SOC platform (e.g., Splunk, Sentinel) detects this due to DMARC failure and
 | smtp-sink   | SMTP sink          | Accepts & discards emails (terminal output) | Linux                 |
 
 ---
-What is MailCatcher?
+
+## What is MailCatcher?
 MailCatcher is a simple tool designed to help developers test and debug email sending in their applications without actually sending real emails over the internet.
 
 It acts as a fake SMTP server that captures all emails sent to it and provides a web interface where you can view those emails in your browser.
