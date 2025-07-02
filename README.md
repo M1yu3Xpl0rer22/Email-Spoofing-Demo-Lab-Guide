@@ -1,35 +1,36 @@
 # Email-Spoofing-Demo-Lab-Guide
 
 
-
-````markdown
-# Email Spoofing Demo & Lab Guide
+Got it! Here's your README content written as **normal plain text**, no markdown formatting — just straightforward paragraphs:
 
 ---
 
-## 🔍 What Is Email Spoofing?
-
-Email spoofing is when an attacker forges the **"From"** address of an email to make it appear as if it's from a trusted source (like a boss, a company, or a known contact), even though it's not.
-
-The attacker does **not** need access to the legitimate email account — they just forge the sender field in the email headers.
+Email Spoofing Demo & Lab Guide
 
 ---
 
-## 🛠️ How Attackers Spoof Email (Methods)
+What Is Email Spoofing?
 
-1. **Using SMTP Servers (Simple Mail Transfer Protocol)**  
-   SMTP doesn't always verify the sender's identity by default. This allows an attacker to send emails from command-line tools or custom scripts using fake "From" addresses.
-
-**Tools commonly used:**
-
-* Telnet / Netcat (manual method)  
-* Sendmail  
-* SMTP libraries in Python (like smtplib)  
-* Email spoofing tools like: SET (Social Engineering Toolkit), Metasploit, SendEmail (Linux tool)
+Email spoofing is when an attacker forges the "From" address of an email to make it look like it’s coming from a trusted source, such as a boss, company, or known contact, even though it isn’t. The attacker does not need access to the real email account — they just fake the sender information in the email headers.
 
 ---
 
-## ⚠️ Python Spoofing Demo Code (Educational Use Only)
+How Attackers Spoof Email (Methods)
+
+One common method is using SMTP servers (Simple Mail Transfer Protocol). SMTP often does not verify the sender’s identity by default, which lets attackers send emails from command-line tools or custom scripts with fake "From" addresses.
+
+Tools attackers commonly use include:
+
+* Telnet or Netcat for manual sending
+* Sendmail
+* SMTP libraries in Python (like smtplib)
+* Spoofing tools such as Social Engineering Toolkit (SET), Metasploit, or SendEmail (Linux tool)
+
+---
+
+Python Spoofing Demo Code (Educational Use Only)
+
+Below is a simple Python script that demonstrates how an email spoof can be sent using smtplib:
 
 ```python
 import smtplib
@@ -43,12 +44,13 @@ msg['To'] = 'victim@example.com'
 
 with smtplib.SMTP('smtp.example.com', 25) as server:
     server.send_message(msg)
-````
+```
 
-> **Note:** Replace `'smtp.example.com'` with your SMTP server.
-> Most real SMTP servers block spoofed emails or require authentication and SPF/DKIM/DMARC validation.
+Note: Replace 'smtp.example.com' with the address of your SMTP server. Keep in mind most real SMTP servers will block spoofed emails or require authentication and verification methods like SPF, DKIM, and DMARC.
 
 ---
+
+
 
 ## 🧰 Techniques to Detect or Prevent Email Spoofing
 
