@@ -224,5 +224,4 @@ Just open an issue or contact me!
 
 ```
 
-Let me know if you want me to save it as a file or help with anything else!
 ```
