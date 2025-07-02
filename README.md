@@ -1,13 +1,7 @@
 # Email-Spoofing-Demo-Lab-Guide
 
 
-Got it! Here's your README content written as **normal plain text**, no markdown formatting — just straightforward paragraphs:
 
----
-
-Email Spoofing Demo & Lab Guide
-
----
 
 What Is Email Spoofing?
 
@@ -94,6 +88,32 @@ Your SOC platform (e.g., Splunk, Sentinel) detects this due to DMARC failure and
 | smtp-sink   | SMTP sink          | Accepts & discards emails (terminal output) | Linux                 |
 
 ---
+What is MailCatcher?
+MailCatcher is a simple tool designed to help developers test and debug email sending in their applications without actually sending real emails over the internet.
+
+It acts as a fake SMTP server that captures all emails sent to it and provides a web interface where you can view those emails in your browser.
+
+Key Features of MailCatcher:
+Captures Emails Locally: Instead of sending emails to real recipients, MailCatcher catches them so you can safely inspect the content.
+
+Web Interface: You can open a local web page (usually at http://localhost:1080) to see the emails, read their content, headers, and attachments.
+
+Easy Setup: Runs as a standalone Ruby gem; simple to install and use on Linux, macOS, or Windows (with Ruby installed).
+
+Great for Development: Perfect for developers who want to test email functionality in their code without spamming real inboxes or worrying about email delivery failures.
+
+No Actual Email Delivery: Emails captured by MailCatcher don’t leave your machine or get sent to real email addresses.
+
+How MailCatcher Works:
+You configure your app or script to send emails through MailCatcher’s SMTP server (usually localhost on port 1025).
+
+MailCatcher receives these emails and stores them.
+
+You open the MailCatcher web UI at http://localhost:1080 to browse and read the captured emails.
+
+Use Case Example
+Say you’re developing a web app that sends confirmation emails when users sign up. Instead of sending real emails every time during development, you point your app’s SMTP settings to MailCatcher. This way, you can verify the email content, subject, and headers safely on your local machine.
+
 
 ### How to install **MailCatcher** on Linux (Debian/Kali)
 
