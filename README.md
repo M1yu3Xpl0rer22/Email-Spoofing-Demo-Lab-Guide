@@ -222,6 +222,3 @@ Just open an issue or contact me!
 
 
 
-```
-
-```
